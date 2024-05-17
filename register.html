@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Authentication</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyC9yX4Pk2IPrcryAFOzwuPiI7KkdSqGssQ",
+        authDomain: "shopapp-118c0.firebaseapp.com",
+        projectId: "shopapp-118c0",
+        storageBucket: "shopapp-118c0.appspot.com",
+        messagingSenderId: "725817268798",
+        appId: "1:725817268798:web:ccce66a2ba577771b60f6f"
+        };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <h1>Firebase Authentication</h1>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="signup-container">
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Email"><br>
+        <input type="password" id="signup-password" placeholder="Password"><br>
+        <button onclick="signup()">Sign Up</button>
+    </div>
+    <button onclick="logout()">Logout</button>
+    <script src="auth.js"></script>
+</body>
+</html>
